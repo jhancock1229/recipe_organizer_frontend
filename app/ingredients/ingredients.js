@@ -9,6 +9,8 @@ angular.module('myApp.ingredients', ['ngRoute'])
   });
 }])
 
-.controller('IngredientsCtrl', [function() {
-
+.controller('IngredientsCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
+    Restangular.all('ingredients').getList().then(function(data) {
+        $scope.ingredients = data;
+    });
 }]);
