@@ -1,3 +1,5 @@
 <ul>
-    <li ng-repeat="recipe in recipes">{{ recipe.name }}: {{ recipe.directions }}</li>
+    <li ng-repeat="recipe in recipes"><a href="#/recipes/{{ recipe.id }}">{{ recipe.name }}</a>: {{ recipe.directions }}</li>
+    <input ng-model="blah">
+    <p>{{ blah }}</p>
 </ul>
