@@ -1,17 +1,20 @@
-<h1>Add a new recipe</h1>
+<div class="container">
+    <h1>Add a new recipe</h1>
 
-<label>Recipe Name</label>
-<input ng-model="recipe.name">
+    <label>Recipe Name</label>
+    <input ng-model="recipe.name">
 
-<label>Recipe Description</label>
-<textarea ng-model="recipe.description"></textarea>
+    <label>Recipe Description</label>
+    <textarea ng-model="recipe.description"></textarea>
 
-<label>Recipe Directions</label>
-<textarea ng-model="recipe.directions"></textarea>
+    <label class="cool-label">Recipe Directions</label>
+    <textarea ng-model="recipe.directions"></textarea>
 
-<p>{{ recipe.name }}</p>
-<p>{{ recipe.description }}</p>
-<p>{{ recipe.directions }}</p>
+    <p>{{ recipe.name }}</p>
 
+    <p>{{ recipe.description }}</p>
 
-<button ng-click="addRecipe()">Save Recipe</button>
+    <p>{{ recipe.directions }}</p>
+
+    <button ng-click="addRecipe()">Save Recipe</button>
+</div>

@@ -1,14 +1,25 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.addRecipe', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view2', {
-    templateUrl: 'view2/view2.html',
-    controller: 'View2Ctrl'
-  });
-}])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/add-recipe', {
+            templateUrl: 'add-recipe/add-recipe.html',
+            controller: 'AddRecipeCtrl'
+        });
+    }])
 
-.controller('View2Ctrl', [function() {
+    .controller('AddRecipeCtrl', ['$scope', 'Restangular', function ($scope, Restangular) {
+        $scope.recipe = {};
 
-}]);
+        $scope.addRecipe = function() {
+            Restangular.all('add-recipe').customPOST($scope.recipe).then(function() {
+                alert("Recipe was created successfully!");
+            },
+            function() {
+                alert("There was a problem")
+            })
+        }
+
+
+    }]);
