@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.ingredients', ['ngRoute'])
+angular.module('recipeOrganizer.ingredients', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/ingredients', {
