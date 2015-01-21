@@ -1,5 +1,10 @@
 <ul>
-    <li ng-repeat="recipe in recipes">{{ recipe.name }}: {{ recipe.directions }}</li>
+    <li ng-repeat="recipe in recipes">{{ recipe.name }}
+        <ol>
+            <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</li>
+        </ol>
+    </li>
+
 </ul>
 
 <a href="#/add-recipe">Add a New Recipe</a>

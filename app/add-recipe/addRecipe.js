@@ -10,8 +10,20 @@ angular.module('recipeOrganizer.addRecipe', ['ngRoute'])
     }])
 
     .controller('AddRecipeCtrl', ['$scope', 'Restangular', '$location', function ($scope, Restangular, $location) {
-        $scope.recipe = {};
+        // Initialize an empty recipe object with an empty ingredients list inside.
+        $scope.recipe = {
+            ingredients: []
+        };
 
+        // Add the ingredients to the recipe object we're building
+        $scope.addIngredientToRecipe = function(ingredientName) {
+            var ingredient = {name: ingredientName};
+            $scope.recipe.ingredients.push(ingredient);
+            $scope.ingredientName = '';
+        };
+
+
+        // Add a new recipe, alert the user when it's been created or when there was a problem.
         $scope.addRecipe = function () {
             Restangular.all('add-recipe').customPOST($scope.recipe).then(function () {
                     alert("Your recipe was successfully created");

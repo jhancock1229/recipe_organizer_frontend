@@ -19,4 +19,17 @@
 <br>
 <br>
 
+<label>Ingredients
+    <br>
+    <input ng-model="ingredientName">
+</label>
+<br>
+<button ng-click="addIngredientToRecipe(ingredientName)">Add ingredient to recipe</button>
+<br>
+
+<p>Your ingredients:</p>
+<ol>
+    <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</li>
+</ol>
+
 <button ng-click="addRecipe()">Save New Recipe</button>
