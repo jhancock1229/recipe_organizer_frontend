@@ -1,8 +1,8 @@
 'use strict';
 
-describe('myApp.ingredients module', function() {
+describe('recipeOrganizer.ingredients module', function() {
 
-  beforeEach(module('myApp.ingredients'));
+  beforeEach(module('recipeOrganizer.ingredients'));
 
   describe('ingredients controller', function(){
 
