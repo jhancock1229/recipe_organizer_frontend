@@ -10,7 +10,7 @@ angular.module('recipeOrganizer.recipes', ['ngRoute'])
 }])
 
 .controller('RecipesCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
-    Restangular.all('recipes').getList().then(function(data) {
-        $scope.recipes = data;
+    Restangular.all('recipes').getList().then(function(recipes) {
+        $scope.recipes = recipes;
     });
 }]);
