@@ -1,11 +1,12 @@
 'use strict';
 
-angular.module('recipeOrganizer', [
+// Declare app level module which depends on views, and components
+angular.module('myApp', [
     'ngRoute',
-    'recipeOrganizer.recipes',
-    'recipeOrganizer.ingredients',
-    'recipeOrganizer.version',
-    'recipeOrganizer.addRecipe',
+    'myApp.recipes',
+    'myApp.recipeDetail',
+    'myApp.addRecipe',
+    'myApp.version',
     'restangular'
 ]).
     config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {

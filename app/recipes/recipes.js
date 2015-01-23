@@ -13,4 +13,10 @@ angular.module('recipeOrganizer.recipes', ['ngRoute'])
     Restangular.all('recipes').getList().then(function(recipes) {
         $scope.recipes = recipes;
     });
+
+    $scope.deleteRecipe = function(recipeID) {
+        Restangular.one('recipes', recipeID).customDELETE().then(function(){
+            $location.path('/recipes');
+        })
+    }
 }]);
