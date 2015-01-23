@@ -1,7 +1,7 @@
 'use strict';
 
-describe('recipeOrganizer.version module', function() {
-  beforeEach(module('recipeOrganizer.version'));
+describe('myApp.version module', function() {
+  beforeEach(module('myApp.version'));
 
   describe('app-version directive', function() {
     it('should print current version', function() {

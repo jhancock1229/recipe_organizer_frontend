@@ -1,8 +1,8 @@
 'use strict';
 
-describe('recipeOrganizer.recipes module', function() {
+describe('myApp.recipes module', function() {
 
-  beforeEach(module('recipeOrganizer.view1'));
+  beforeEach(module('myApp.view1'));
 
   describe('recipes controller', function(){
 
