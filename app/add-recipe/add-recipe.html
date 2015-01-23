@@ -32,4 +32,18 @@
     <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</li>
 </ol>
 
+<label>Tags
+    <br>
+    <input ng-model="tagName">
+</label>
+<br>
+<button ng-click="addTagToRecipe(tagName)">Add tag to recipe</button>
+<br>
+
+<p>Your tags:</p>
+<ol>
+    <li ng-repeat="tag in recipe.tags">{{ tag.name }}</li>
+</ol>
+<br>
+
 <button ng-click="addRecipe()">Save New Recipe</button>
