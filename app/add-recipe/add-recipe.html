@@ -1,43 +1,39 @@
 
-
-
-
 <div class="container-fluid">
-
-
-    <div class="col-lg-2">
+    <div>
         <label class="add-recipe-labels">Recipe Name
             <br>
-            <input ng-model="recipe.name">
+            <input ng-model="recipe.name" placeholder="Name">
         </label>
     </div>
 
 
-    <div class="col-lg-2">
+
+    <div>
         <label class="add-recipe-labels">Recipe Description
         <br>
-        <textarea ng-model="recipe.description"></textarea>
+        <textarea ng-model="recipe.description" placeholder="Description"></textarea>
         </label>
     </div>
 
 
-    <div class="col-lg-2">
+    <div>
         <label class="add-recipe-labels">Recipe Directions
         <br>
-        <textarea ng-model="recipe.directions"></textarea>
+        <textarea ng-model="recipe.directions" placeholder="Directions"></textarea>
         </label>
     </div>
 
 
-    <div class="col-lg-2">
+    <div>
         <label>
-            <form ng-submit="addIngredientToRecipe(ingredientName)">
+            <form ng-submit="addIngredientToRecipe(ingredientName)" ng-keypress="13">
             <div class="add-recipe-labels">Ingredients
             <br>
             </div>
-            <input ng-model="ingredientName">
+            <input ng-model="ingredientName" placeholder="Tomatoes, Oregano, etc.">
         <br>
-        <input type ="submit" value="Add to Recipe" class="button"/>
+        <input type ="submit" value="Add to Recipe" class="btn btn-default"/>
             </form>
         </label>
         <p>Your ingredients:</p>
@@ -47,18 +43,17 @@
     </div>
 
 
-    <div class="col-lg-2">
+    <div>
         <label>
             <form ng-submit="addTagToRecipe(tagName)">
-            <div class="add-recipe-labels">Tags
+            <div>Tags
             <br>
             </div>
             <input ng-model="tagName">
             <br>
-            <input type ="submit" value="Add to Tags" class="button"/>
-                </form>
+            <input type ="submit" value="Add to Tags" class="btn btn-default"/>
+            </form>
         </label>
-
         <p>Your tags:</p>
         <ul>
             <li ng-repeat="tag in recipe.tags">{{ tag.name }}</li>
@@ -67,10 +62,9 @@
 
 
     </div>
-    <div class="container">
-        <div class="add-recipe-labels">
+    <div class="row">
         <div class="col-lg-12">
-        <button ng-click="addRecipe()">Save New Recipe</button>
+        <button ng-click="addRecipe()" class="btn btn-default">Save New Recipe</button>
         </div>
-        </div>
+
 </div>

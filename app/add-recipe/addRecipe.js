@@ -16,6 +16,8 @@ angular.module('myApp.addRecipe', ['ngRoute'])
             tags: []
         };
 
+        document.getElementById('recipe-name').focus()
+
         // Add the ingredients to the recipe object we're building
         $scope.addIngredientToRecipe = function(ingredientName) {
             var ingredient = {name: ingredientName};

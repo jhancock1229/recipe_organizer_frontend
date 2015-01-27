@@ -1,22 +1,12 @@
-'use strict';
-
-angular.module('myApp.recipes', ['ngRoute'])
+angular.module('myApp.splash', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/recipes', {
-    templateUrl: 'recipes/recipes.html',
-    controller: 'RecipesCtrl'
+  $routeProvider.when('/splash', {
+    templateUrl: 'splash/splash.html',
+    controller: 'SplashCtrl'
   });
 }])
 
-.controller('RecipesCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
-    Restangular.all('recipes').getList().then(function(recipes) {
-        $scope.recipes = recipes;
-    });
+.controller('SplashCtrl', ['$scope', 'Restangular', function($scope, Restangular) {
 
-    $scope.deleteRecipe = function(recipeID) {
-        Restangular.one('recipes', recipeID).customDELETE().then(function(){
-            $location.path('/recipes');
-        })
-    }
 }]);

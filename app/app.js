@@ -7,6 +7,7 @@ angular.module('myApp', [
     'myApp.recipeDetail',
     'myApp.addRecipe',
     'myApp.version',
+    'myApp.splash',
     'restangular'
 ]).
     config(['$routeProvider', 'RestangularProvider', function ($routeProvider, RestangularProvider) {
