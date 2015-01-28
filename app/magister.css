@@ -449,3 +449,13 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 .recipe-card img {
     max-width: 100%;
 }
+.panelGridCenter {
+    margin: 0 auto;
+}
+
+.add-recipe {
+	margin-top: 25%;
+}
+.cards {
+	font-family: 'Wire One', Helvetica, Arial, sans-serif;
+}
