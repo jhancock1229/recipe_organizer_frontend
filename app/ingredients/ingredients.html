@@ -1,3 +1,4 @@
 <ul>
-    <li ng-repeat="ingredient in ingredients">{{ ingredient.name }}</li>
+    <li ng-repeat="ingredient in ingredients" ng-click="query=ingredient.name">{{ ingredient.name }}</li>
+    <p ng-repeat="r in recipes | filter:query"></p>
 </ul>
