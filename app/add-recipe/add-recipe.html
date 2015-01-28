@@ -1,10 +1,10 @@
 <div class="container-fluid">
     <div class="col-md-4 col-md-offset-4">
-        <div class="panel panel-default add-recipe">
+        <div class="panel panel-default add-recipe cards">
             <div class="panel-heading">
                 <h3 class="panel-title">
                     <div>
-                        <label>Name
+                        <label>Title
                             <br>
                             <input id="recipe-name" ng-model="recipe.name" placeholder="Title of Recipe"/>
                         </label>
@@ -13,16 +13,14 @@
                     <div>
                         <label>
                             <form ng-submit="addTagToRecipe(tagName)">
-                                <div>Tags
+                                <div>Category
                                     <br>
                                 </div>
-                                <input ng-model="tagName">
-                                <br>
-                                <input type="submit" value="Add to Tags" class="btn btn-default"/>
+                                <input ng-model="tagName" placeholder="Category">
+
                             </form>
                         </label>
 
-                        <p>Your tags:</p>
                         <ul>
                             <li ng-repeat="tag in recipe.tags">{{ tag.name }}</li>
                         </ul>
@@ -35,7 +33,7 @@
                 <div>
                     <label>Recipe Description
                         <br>
-                        <textarea ng-model="recipe.description" placeholder="Description"></textarea>
+                        <textarea ng-model="recipe.description" placeholder="Description" class="col-"></textarea>
                     </label>
                 </div>
 
