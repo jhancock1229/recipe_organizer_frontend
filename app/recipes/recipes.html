@@ -1,14 +1,17 @@
 <a href="#/add-recipe">Add a New recipe</a>
-
+Search: <input ng-model="query">
 <div ng-repeat="recipe in recipes">
     <div class="container-fluid">
-        <div class="col-md-4 col-md-offset-4">
+        <div>
            <a href="#/recipes/{{ recipe.id }}">
                <div class="panel panel-default add-recipe cards">
                 <div class="panel-heading">
                     <h3 class="panel-title">
                         <div>
                             {{ recipe.name }}
+                        </div>
+                        <div>
+                            {{ recipe.photo }}
                         </div>
 
                         <div>
@@ -20,11 +23,7 @@
                     <div>
                         <p>{{ recipe.description }}</p>
                     </div>
-                    <div>
-                        <button class="btn btn-danger" ng-click="deleteRecipe()"><span
-                                class="glyphicon glyphicon-trash"></span>Delete Recipe
-                        </button>
-                    </div>
+
                 </div>
             </div></a>
         </div>

@@ -28,3 +28,19 @@
   /*content: "";*/
   /*padding: 0;*/
 /*}*/
+
+.full-width-textarea {
+  width: 100%;
+  background-color: inherit;
+  color: white;
+  border:inherit;
+}
+.color-formatting {
+  background-color: inherit;
+  border: inherit;
+  color: white;
+}
+.expandingArea {
+  position: relative;
+    height: 200px;
+}

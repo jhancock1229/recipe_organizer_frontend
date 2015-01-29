@@ -1,5 +1,48 @@
-<h1>{{ recipe.name }}</h1>
+<div class="container-fluid">
+    <div class="col-xs-4 col-xs-offset-4">
+        <div class="panel panel-default add-recipe cards">
+            <div class="panel-heading">
+                <h3 class="panel-title row">
+                    <div>
+                        <label class="col-lg-6">
+                            <h1>{{ recipe.name }}</h1>
+                        </label>
 
-<p>{{ recipe.description }}</p>
-<p>{{ recipe.directions }}</p>
-<img src="{{ recipe.photo }}" alt=""/>
+                        <label class="col-lg-6">
+                            <p>{{ tag.recipe }}</p>
+                        </label>
+                    </div>
+                </h3>
+            </div>
+            <div class="panel-body">
+
+                <div class="form-group">
+
+                    <div class="row">
+                        <p>{{ recipe.description }}</p>
+                    </div>
+
+                    <div class="row">
+                        <label class="col-lg-6">
+                            <p>{{ recipe.ingredients }}</p>
+                        </label>
+                        <label class="col-lg-6">
+                            <p>{{ recipe.directions }}</p>
+                        </label>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+            <p>
+                <a href="#/recipes" class="btn btn-primary" ng-click="callback()">Back to recipes<a/>
+            <p class="btn btn-danger btn-xs pull-right" ng-click="deleteRecipe()">Delete Recipe</p>
+            </p>
+        </div>
+    </div>
+</div>
+</div>

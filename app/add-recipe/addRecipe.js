@@ -36,7 +36,7 @@ angular.module('myApp.addRecipe', ['ngRoute'])
         $scope.addRecipe = function () {
             Restangular.all('add-recipe').customPOST($scope.recipe).then(function () {
                     alert("Your recipe was successfully created");
-                    $location.path('/recipes');
+                    $location.path('/add-recipe');
                 },
                 function () {
                     alert("There was a problem creating your recipe. Please try again.")

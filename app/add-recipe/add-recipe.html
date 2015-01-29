@@ -1,22 +1,19 @@
 <div class="container-fluid">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-xs-4 col-xs-offset-4">
         <div class="panel panel-default add-recipe cards">
             <div class="panel-heading">
-                <h3 class="panel-title">
+                <h3 class="panel-title row">
                     <div>
-                        <label>Title
-                            <br>
-                            <input id="recipe-name" ng-model="recipe.name" placeholder="Title of Recipe"/>
-                        </label>
-                    </div>
+                        <label class="col-lg-6">
 
-                    <div>
-                        <label>
+                            <input class="color-formatting" id="recipe-name" ng-model="recipe.name"
+                                   placeholder="Title of Recipe"/>
+                        </label>
+
+                        <label class="col-lg-6">
                             <form ng-submit="addTagToRecipe(tagName)">
-                                <div>Category
-                                    <br>
-                                </div>
-                                <input ng-model="tagName" placeholder="Category">
+
+                                <input class="color-formatting" ng-model="tagName" placeholder="Category">
 
                             </form>
                         </label>
@@ -30,48 +27,44 @@
             </div>
             <div class="panel-body">
 
-                <div>
-                    <label>Recipe Description
-                        <br>
-                        <textarea ng-model="recipe.description" placeholder="Description" class="col-"></textarea>
-                    </label>
-                </div>
+                <div class="form-group">
+
+                    <div class="row">
+                        <textarea class="full-width-textarea" ng-model="recipe.description"
+                                  placeholder="Description"></textarea>
+                    </div>
+
+                    <div class="row">
+                        <label class="col-lg-6">
+                            <form ng-submit="addIngredientToRecipe(ingredientName)" ng-keypress="13">
+                                <div class="add-recipe-labels">
+
+                                </div>
+                                <input class="color-formatting" ng-model="ingredientName" placeholder="Ingredients">
+                            </form>
+                            <ul class="shadow">
+                                <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}
+                                </li>
+                            </ul>
+                        </label>
+                        <label class="col-lg-6">
+                            <textarea class="full-width-textarea expandingArea" ng-model="recipe.directions"
+                                      placeholder="Directions"></textarea>
+                        </label>
+
+                    </div>
 
 
-                <div>
-                    <label>Recipe Directions
-                        <br>
-                        <textarea ng-model="recipe.directions" placeholder="Directions"></textarea>
-                    </label>
-                </div>
-
-
-                <div>
-                    <label>
-                        <form ng-submit="addIngredientToRecipe(ingredientName)" ng-keypress="13">
-                            <div class="add-recipe-labels">Ingredients
-                                <br>
-                            </div>
-                            <input ng-model="ingredientName" placeholder="Tomatoes, Oregano, etc.">
-                            <br>
-                            <input type="submit" value="Add to Recipe" class="btn btn-default"/>
-                        </form>
-                    </label>
-
-                    <p>Your ingredients:</p>
-                    <ul class="shadow">
-                        <li ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</li>
-                    </ul>
                 </div>
 
 
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <button ng-click="addRecipe()" class="btn btn-default">Save New Recipe</button>
-                </div>
 
+            <div class="col-xs-12 col-xs-offset-4">
+                <button ng-click="addRecipe()" class="btn btn-default">Save New Recipe</button>
             </div>
+
+
         </div>
     </div>
 </div>
