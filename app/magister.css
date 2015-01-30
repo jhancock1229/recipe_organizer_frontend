@@ -1,5 +1,5 @@
 html {
-	background:#505D6E url(images/freshveggies.jpg) no-repeat center center fixed;
+	background:#505D6E url(images/spices.jpg) no-repeat center center fixed;
 	min-height:100%;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
@@ -81,8 +81,9 @@ body {
 	font-weight:bold;
 }
 .mainmenu .open .dropdown-menu { 
-	top:2px;
-	opacity:1;
+top: 30px;
+left: 50px;
+opacity: 1;
 }
 .mainmenu .dropdown-menu a { 
 	padding:10px 10px;
@@ -305,7 +306,7 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
 	color:#000;
 }
 .theme-invert .btn {
-	color:rgba(255,255,255,.8);
+	color: white;
 	font-weight: bold;
 }
 .theme-invert .btn:hover {
@@ -324,17 +325,18 @@ a:hover, a:active { color:#fff; text-decoration: underline; }
   background: #333;
 }
 .theme-invert .mainmenu .dropdown-menu a { 
-	color:#000;
+	color:#ffffff;
+	font-weight: bold;
 }
 .theme-invert .mainmenu .dropdown-menu a:hover { 
-	background:rgba(0,0,0,.1);
-	color:#000;
+	background:rgba(0,0,0,.6);
+	color:#ffffff;
 }
 
 .theme-invert .title,
 .theme-invert .subtitle,
 .theme-invert .tagline { 
-	color:#f8f8ff;
+	color: white;
 	font-weight: bold;
 }
 
