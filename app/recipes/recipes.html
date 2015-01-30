@@ -1,7 +1,7 @@
 <a href="#/add-recipe">Add a New recipe</a>
 Search: <input ng-model="query">
-<div ng-repeat="recipe in recipes">
-    <div class="container-fluid">
+<div class="container-fluid ">
+    <div ng-repeat="recipe in recipes" class="col-md-3">
         <div>
            <a href="#/recipes/{{ recipe.id }}">
                <div class="panel panel-default add-recipe cards">
@@ -10,9 +10,7 @@ Search: <input ng-model="query">
                         <div>
                             {{ recipe.name }}
                         </div>
-                        <div>
-                            {{ recipe.photo }}
-                        </div>
+
 
                         <div>
                             <p>{{ recipe.tag }}</p>

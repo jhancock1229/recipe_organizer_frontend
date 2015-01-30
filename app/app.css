@@ -44,3 +44,7 @@
   position: relative;
     height: 200px;
 }
+
+input:focus, textarea:focus {
+  outline: none;
+}
