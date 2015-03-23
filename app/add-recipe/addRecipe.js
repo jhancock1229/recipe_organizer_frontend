@@ -19,7 +19,7 @@ angular.module('myApp.addRecipe', ['ngRoute'])
         document.getElementById('recipe-name').focus();
 
         // Add the ingredients to the recipe object we're building
-        $scope.addIngredientToRecipe = function(ingredientName) {
+        $scope.addIngredientToRecipe = function (ingredientName) {
             var ingredient = {name: ingredientName};
             if (ingredientName) $scope.recipe.ingredients.push(ingredient);
             $scope.ingredientName = '';
@@ -42,5 +42,6 @@ angular.module('myApp.addRecipe', ['ngRoute'])
                 },
                 function () {
                     alert("There was a problem creating your recipe. Please try again.")
-                })}
+                })
+        }
     }]);

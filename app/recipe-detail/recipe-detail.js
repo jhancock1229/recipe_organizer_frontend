@@ -2,21 +2,21 @@
 
 angular.module('myApp.recipeDetail', ['ngRoute'])
 
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/recipes/:recipeId', {
-    templateUrl: 'recipe-detail/recipe-detail.html',
-    controller: 'RecipeDetailCtrl'
-  });
-}])
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider.when('/recipes/:recipeId', {
+            templateUrl: 'recipe-detail/recipe-detail.html',
+            controller: 'RecipeDetailCtrl'
+        });
+    }])
 
-.controller('RecipeDetailCtrl', ['$scope', 'Restangular', '$routeParams', '$location', function($scope, Restangular, $routeParams, $location) {
+    .controller('RecipeDetailCtrl', ['$scope', 'Restangular', '$routeParams', '$location', function ($scope, Restangular, $routeParams, $location) {
 
-    $scope.recipeId = $routeParams.recipeId;
+        $scope.recipeId = $routeParams.recipeId;
 
-    Restangular.one('recipes', $scope.recipeId).customGET().then(function(data){
-        $scope.recipe = data;
-    })
-    $scope.deleteRecipe = function () {
+        Restangular.one('recipes', $scope.recipeId).customGET().then(function (data) {
+            $scope.recipe = data;
+        })
+        $scope.deleteRecipe = function () {
             var confirmation = confirm('Are you sure you want to delete this recipe? This cannot be undone');
 
             if (confirmation) {
@@ -29,4 +29,4 @@ angular.module('myApp.recipeDetail', ['ngRoute'])
                     })
             }
         }
-}]);
+    }]);

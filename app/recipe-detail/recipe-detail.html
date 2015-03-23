@@ -7,7 +7,6 @@
                         <label class="col-lg-6">
                             <h1>{{ recipe.name }}</h1>
                         </label>
-
                         <label class="col-lg-6">
                             <p>{{ tag.recipe }}</p>
                         </label>
@@ -15,13 +14,10 @@
                 </h3>
             </div>
             <div class="panel-body">
-
                 <div class="form-group">
-
                     <div class="row">
                         <p>{{ recipe.description }}</p>
                     </div>
-
                     <div class="row">
                         <label class="col-lg-6">
                             <p ng-repeat="ingredient in recipe.ingredients">{{ ingredient.name }}</p>
@@ -29,19 +25,11 @@
                         <label class="col-lg-6">
                             <p>{{ recipe.directions }}</p>
                         </label>
-
                     </div>
-
-
                 </div>
-
-
             </div>
-
             <p>
-
                 <a href="#/recipes" class="btn btn-primary btn-xs pull-left" ng-click="callback()">Back to recipes<a/>
-
                     <p class="btn btn-danger btn-xs pull-right" ng-click="deleteRecipe()">Delete Recipe</p>
             </p>
         </div>
